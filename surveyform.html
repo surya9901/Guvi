@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="survey.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="nav">
+        SURVEY FORM
+    </div>
+    <form>
+    <div class="container col-11 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+        <div class="label1">
+            <label for="fname">Name</label>
+            <label for="star" style="color: brown;">*</label>
+            <input type="text" placeholder="Enter your name" required>
+        </div>
+        <div class="label2">
+            <label for="lname">Last Name</label>
+            <input type="text" placeholder="Enter your Last name">
+        </div>
+    </div>
+
+        <div class="label3 col-6 col-md-4 col-lg-3 col-xl-2 col-xxl-2">
+            <label for="email">Email</label>
+            <label for="start" style="color: brown;">*</label>
+            <input type="email" placeholder="Enter your Email id" required>        
+        </div>
+
+        <div class="exp">
+            <label for="experience">Your Experience</label>
+            <label for="star" style="color:brown">*</label>
+        </div>
+        <ul>
+            <li><label for="rating_1"><i class="fa fa-star" aria-hidden="true"></i></label>
+                <input type="radio1" id="rating_1" name="ratings" value="1"></li>
+            <li><label for="rating_2"><i class="fa fa-star" aria-hidden="true"></i></label>
+                <input type="radio1" id="rating_2" name="ratings" value="2"></li>
+            <li><label for="rating_3"><i class="fa fa-star" aria-hidden="true"></i></label>
+                <input type="radio1" id="rating_3" name="ratings" value="3"></li>
+            <li><label for="rating_4"><i class="fa fa-star" aria-hidden="true"></i></label>
+                <input type="radio1" id="rating_4" name="ratings" value="4"></li>
+            <li><label for="rating_5"><i class="fa fa-star" aria-hidden="true"></i></label>
+                <input type="radio1" id="rating_5" name="ratings" value="5"></li>
+        </ul>
+        <script>
+            $('li').on('click',function(){
+                $('li').removeClass('active');
+                $('li').removeClass('secondary-active');
+                $(this).addClass('active');
+                $(this).prevAll().addClass('secondary-active');
+            })
+        </script>
+
+        <div class="exptxt">
+            Overall, How would you rate your experience with us?
+        </div>
+
+        <div class="exptxt1">
+            <label for="table"><strong> How likely are you to</strong></label>
+            <label for="star" style="color: brown;"><strong>*</strong></label> 
+        </div>
+
+       <table style="width:100% col-4 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <tr>
+                <th></th>
+                <th>Very Unsatisfied</th>
+                <th>Unsatisfied</th>
+                <th>Neutral</th>
+                <th>Satisfied</th>
+                <th>Very Satisfied</th>
+            </tr>
+            <tr>
+                <td style="text-align : left" required>Purchase</td>
+                <td><input type="radio" id="Veryunsatisfied" name="rating1" value="VeryUnsatisfied"></td>
+                <td><input type="radio" id="Unsatisfied" name="rating1" value="Unsatisfied"></td>
+                <td><input type="radio" id="Neutral" name="rating1" value="Neutral"></td>
+                <td><input type="radio" id="Satisfied" name="rating1" value="Satisfied"></td>
+                <td><input type="radio" id="Verysatisfied" name="rating1" value="Verysatisfied"></td>
+            </tr>
+            <tr>
+                <td style="text-align : left" required>Service</td>
+                <td><input type="radio" id="Veryunsatisfied" name="rating2" value="VeryUnsatisfied"></td>
+                <td><input type="radio" id="Unsatisfied" name="rating2" value="Unsatisfied"></td>
+                <td><input type="radio" id="Neutral" name="rating2" value="Neutral"></td>
+                <td><input type="radio" id="Satisfied" name="rating2" value="Satisfied"></td>
+                <td><input type="radio" id="Verysatisfied" name="rating2" value="Verysatisfied"></td>
+            </tr>
+            <tr>
+                <td style="text-align : left" required>Company Overall</td>
+                <td><input type="radio" id="Veryunsatisfied" name="rating3" value="VeryUnsatisfied"></td>
+                <td><input type="radio" id="Unsatisfied" name="rating3" value="Unsatisfied"></td>
+                <td><input type="radio" id="Neutral" name="rating3" value="Neutral"></td>
+                <td><input type="radio" id="Satisfied" name="rating3" value="Satisfied"></td>
+                <td><input type="radio" id="Verysatisfied" name="rating3" value="Verysatisfied"></td>
+            </tr>
+        </table>
+        
+        <div class="exptxt2">
+            <label for="table"><strong> How likely are you to</strong></label>
+            <label for="star" style="color: brown;"><strong>*</strong></label> 
+        </div>
+
+       <table style="width:100% col-6 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <tr>
+                <th></th>
+                <th>Very Unlikely</th>
+                <th>Unlikely</th>
+                <th>Neutral</th>
+                <th>Very Likely</th>
+                <th>Likely</th>
+            </tr>
+            <tr>
+                <td style="text-align : left" required>Buy from us again</td>
+                <td><input type="radio" id="VeryUnlikely" name="rating4" value="VeryUnlikely"></td>
+                <td><input type="radio" id="Unlikely" name="rating4" value="VeryUnlikely"></td>
+                <td><input type="radio" id="Neutral" name="rating4" value="Neutral"></td>
+                <td><input type="radio" id="Likely" name="rating4" value="Likely"></td>
+                <td><input type="radio" id="Verylikely" name="rating4" value="Verylikely"></td>
+            </tr>
+            <tr>
+                <td style="text-align : left" required>Recommend our products to other</td>
+                <td><input type="radio" id="VeryUnlikely" name="rating5" value="VeryUnlikely"></td>
+                <td><input type="radio" id="Unlikely" name="rating5" value="VeryUnlikely"></td>
+                <td><input type="radio" id="Neutral" name="rating5" value="Neutral"></td>
+                <td><input type="radio" id="Likely" name="rating5" value="Likely"></td>
+                <td><input type="radio" id="Verylikely" name="rating5" value="Verylikely"></td>
+            </tr>
+            <tr>
+                <td style="text-align : left" required>Recommend our Company to other</td>
+                <td><input type="radio" id="VeryUnlikely" name="rating6" value="VeryUnlikely"></td>
+                <td><input type="radio" id="Unlikely" name="rating6" value="VeryUnlikely"></td>
+                <td><input type="radio" id="Neutral" name="rating6" value="Neutral"></td>
+                <td><input type="radio" id="Likely" name="rating6" value="Likely"></td>
+                <td><input type="radio" id="Verylikely" name="rating6" value="Verylikely"></td>
+            </tr>
+        </table> 
+        <div class="addcmt">
+            <label for="coomment"><strong>Comments or Suggestions :</strong></label>
+            <textarea id="comment" name="comment" rows="5" cols="50"></textarea>
+        </div>
+        <input type="submit" class="button" value="Submit">
+    </form>
+
+</body>
+</body>
+</html>
